@@ -398,7 +398,7 @@
       ],
       "value": "All Products"
     }, {
-      "id": "9a59f783-8462-4394-a57e-5674d5f236a0",
+      "id": "9a019dfe-70d7-4cf1-963b-22cebb5d95f5",
       "comment": "",
       "command": "close",
       "target": "",
@@ -583,7 +583,7 @@
       "id": "e52e4057-d65a-4342-b8ff-bbe8d5ec1bc4",
       "comment": "",
       "command": "click",
-      "target": "css=tr:nth-child(79) > td:nth-child(12) > a",
+      "target": "xpath=//td[contains(.,'testname')]/following-sibling::td[contains(.,'Remove')]/a",
       "targets": [
         ["css=tr:nth-child(79) > td:nth-child(12) > a", "css:finder"],
         ["xpath=(//a[contains(text(),'Remove')])[78]", "xpath:link"],
