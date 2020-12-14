@@ -10,31 +10,30 @@ namespace WebDriverBasic
     {
         private IWebDriver driver;
         private string logInPageURL = "http://localhost:5000/Account/Login?ReturnUrl=%2F";
-        private string homePageURL = "http://localhost:5000/";
-        private string productsPageURL = "http://localhost:5000/Product";
         By testProductEditLocator = By.XPath("//td[.=\"testName\"]/following-sibling::td[.=\"Edit\"]/a");
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl(logInPageURL);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+
+            driver.Navigate().GoToUrl(logInPageURL);
+            driver.FindElement(By.Id("Name")).SendKeys("user");
+            driver.FindElement(By.Id("Password")).SendKeys("user");
+            driver.FindElement(By.ClassName("btn")).Click();
         }
 
-        [Test]
-        public void LogInTest()
+        [Test, Order(1)]
+        public void LogIn()
         {
-            LogIn(driver);
-
-            Assert.AreEqual(homePageURL, driver.Url);
+            Assert.AreEqual("Home page", driver.FindElement(By.CssSelector("h2")).Text);
         }
 
         [Test]
         public void AddProduct()
         {
-            LogIn(driver);
             driver.FindElement(By.XPath("//div[contains(., \"All Products\")]/a")).Click();
             driver.FindElement(By.ClassName("btn")).Click();
 
@@ -51,19 +50,13 @@ namespace WebDriverBasic
 
             driver.FindElement(By.ClassName("btn")).Click();
 
-            bool isProductPresent = IsElementPresent(driver, testProductEditLocator);
+            bool isProductPresent = IsElementPresent(testProductEditLocator);
             Assert.IsTrue(isProductPresent);
         }
 
         [Test]
         public void CheckProduct()
         {
-            LogIn(driver);
-            driver.Navigate().GoToUrl(productsPageURL);
-
-            bool isProductPresent = IsElementPresent(driver, testProductEditLocator);
-            Assert.IsTrue(isProductPresent);
-
             driver.FindElement(testProductEditLocator).Click();
 
             SelectElement selectCategory = new SelectElement(driver.FindElement(By.Id("CategoryId")));
@@ -81,21 +74,14 @@ namespace WebDriverBasic
             Assert.IsFalse(driver.FindElement(By.Id("Discontinued")).Selected);
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void CloseDriver()
         {
             driver.Close();
             driver.Quit();
         }
 
-        private static void LogIn(IWebDriver driver)
-        {
-            driver.FindElement(By.Id("Name")).SendKeys("user");
-            driver.FindElement(By.Id("Password")).SendKeys("user");
-            driver.FindElement(By.ClassName("btn")).Click();
-        }
-
-        private static Boolean IsElementPresent(IWebDriver driver, By locator)
+        private Boolean IsElementPresent(By locator)
         {
             try
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U47JX8ExVGpK4dmL03xZx6y0DotBUEY9D8a22uiItubQPiqsmK/87uNSF9/AQe1kNr8trWYTxDGdTxXCMuRlzA==",
+  "dgSpecHash": "BfDYRg5xmBqIRKUJ91XNgkRyc44HAIUMMKiz820cV0n02AnEFo+uJeAr/mmJlWXRct2GL9YzPtJnYmo9HNHU6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Basic\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
+  "projectFilePath": "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Виталий\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\Виталий\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
