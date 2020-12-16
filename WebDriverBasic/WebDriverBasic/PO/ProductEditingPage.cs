@@ -75,15 +75,10 @@ namespace WebDriverBasic.PO
         public AllProductsPage AddTestProduct(string productName, string category, string supplier, string unitPrice, 
             string quantityPerUnit, string unitsInStock, string unitsOnOrder, string reorderLevel, bool discontinued)
         {
-            //productNameInput.SendKeys(productName);
             new Actions(driver).SendKeys(productNameInput, productName).Build().Perform();
-
             categorySelect.SelectByText(category);
             supplierSelect.SelectByText(supplier);
-
-            //unitPriceInput.SendKeys(unitPrice);
             new Actions(driver).SendKeys(unitPriceInput, unitPrice).Build().Perform();
-
             quantityPerUnitInput.SendKeys(quantityPerUnit);
             unitsInStockInput.SendKeys(unitsInStock);
             unitsOnOrderInput.SendKeys(unitsOnOrder);
@@ -94,7 +89,6 @@ namespace WebDriverBasic.PO
                 discontinuedCheckbox.Click();
             }
 
-            //submitBtn.Click();
             new Actions(driver).Click(submitBtn).Build().Perform();
 
             return new AllProductsPage(driver);

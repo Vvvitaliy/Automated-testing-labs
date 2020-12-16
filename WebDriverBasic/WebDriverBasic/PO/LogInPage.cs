@@ -20,9 +20,9 @@ namespace WebDriverBasic.PO
 
         public HomePage LogIn(string login, string password)
         {
-            driver.FindElement(By.Id("Name")).SendKeys("user");
-            driver.FindElement(By.Id("Password")).SendKeys("user");
-            driver.FindElement(By.ClassName("btn")).Click();
+            nameInput.SendKeys(login);
+            passwordInput.SendKeys(password);
+            submitBtn.Click();
 
             return new HomePage(driver);
         }

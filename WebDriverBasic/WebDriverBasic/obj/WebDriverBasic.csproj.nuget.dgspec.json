@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Advansed\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj": {}
+    "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Advansed\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj": {
+    "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Advansed\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
+        "projectUniqueName": "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
         "projectName": "WebDriverBasic",
-        "projectPath": "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Advansed\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
+        "projectPath": "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
         "packagesPath": "C:\\Users\\Виталий\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Advansed\\WebDriverBasic\\WebDriverBasic\\obj\\",
+        "outputPath": "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Виталий\\AppData\\Roaming\\NuGet\\NuGet.Config",
