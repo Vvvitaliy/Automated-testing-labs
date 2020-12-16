@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverBasic", "WebDriverBasic\WebDriverBasic.csproj", "{A81F85A8-F622-4DF0-8C10-401B689FD7CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A81F85A8-F622-4DF0-8C10-401B689FD7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81F85A8-F622-4DF0-8C10-401B689FD7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81F85A8-F622-4DF0-8C10-401B689FD7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81F85A8-F622-4DF0-8C10-401B689FD7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3381FC58-AD7E-4139-8F90-19F7654B9179}
+	EndGlobalSection
+EndGlobal
