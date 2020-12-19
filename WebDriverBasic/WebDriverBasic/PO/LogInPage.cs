@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebDriverBasic.business_objects;
 
-namespace WebDriverBasic.PO
+namespace WebDriverBasic.po
 {
-    class LogInPage
+    public class LogInPage
     {
         private IWebDriver driver;
 
@@ -18,10 +19,10 @@ namespace WebDriverBasic.PO
             this.driver = driver;
         }
 
-        public HomePage LogIn(string login, string password)
+        public HomePage LogIn(User user)
         {
-            nameInput.SendKeys(login);
-            passwordInput.SendKeys(password);
+            nameInput.SendKeys(user.Name);
+            passwordInput.SendKeys(user.Password);
             submitBtn.Click();
 
             return new HomePage(driver);
