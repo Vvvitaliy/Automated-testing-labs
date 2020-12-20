@@ -27,15 +27,13 @@ namespace WebDriverBasic.service.ui
 
         public static bool CompareProducts(Product expectedProduct, ProductEditingPage actualProduct)
         {
-            return expectedProduct.ProductName.Equals(actualProduct.GetProductNameValue()) &&
-                expectedProduct.Category.Equals(actualProduct.GetCategoryText()) &&
-                expectedProduct.Supplier.Equals(actualProduct.GetSupplierText()) &&
-                Double.Parse(expectedProduct.UnitPrice).Equals(Double.Parse(actualProduct.GetUnitPriceValue())) &&
-                expectedProduct.QuantityPerUnit.Equals(actualProduct.GetQuantityPerUnitValue()) &&
-                expectedProduct.UnitsInStock.Equals(actualProduct.GetUnitsInStockValue()) &&
-                expectedProduct.UnitsOnOrder.Equals(actualProduct.GetUnitsOnOrderValue()) &&
-                expectedProduct.ReorderLevel.Equals(actualProduct.GetReorderLevelValue()) &&
-                expectedProduct.Discontinued.Equals(actualProduct.GetDiscontinuedStatus());
+            Product temp = new Product(actualProduct.GetProductNameValue(), actualProduct.GetCategoryText(),
+                actualProduct.GetSupplierText(), actualProduct.GetUnitPriceValue(), 
+                actualProduct.GetQuantityPerUnitValue(), actualProduct.GetUnitsInStockValue(), 
+                actualProduct.GetUnitsOnOrderValue(), actualProduct.GetReorderLevelValue(),
+                actualProduct.GetDiscontinuedStatus());
+
+            return expectedProduct.Equals(temp);
         }
     }
 }

@@ -29,5 +29,25 @@ namespace WebDriverBasic.business_objects
             ReorderLevel = reorderLevel;
             Discontinued = discontinued;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Product product = (Product)obj;
+
+            return this.ProductName.Equals(product.ProductName) &&
+                this.Category.Equals(product.Category) &&
+                this.Supplier.Equals(product.Supplier) &&
+                Double.Parse(this.UnitPrice).Equals(Double.Parse(product.UnitPrice)) &&
+                this.QuantityPerUnit.Equals(product.QuantityPerUnit) &&
+                this.UnitsInStock.Equals(product.UnitsInStock) &&
+                this.UnitsOnOrder.Equals(product.UnitsOnOrder) &&
+                this.ReorderLevel.Equals(product.ReorderLevel) &&
+                this.Discontinued.Equals(product.Discontinued);
+        }
     }
 }
