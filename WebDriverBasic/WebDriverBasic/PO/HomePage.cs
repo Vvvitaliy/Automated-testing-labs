@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebDriverBasic.PO
+namespace WebDriverBasic.po
 {
-    class HomePage
+    public class HomePage
     {
         private IWebDriver driver;
         private IWebElement heading => driver.FindElement(By.CssSelector("h2"));

@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebDriverBasic.business_objects;
 
-namespace WebDriverBasic.PO
+namespace WebDriverBasic.po
 {
-    class AllProductsPage
+    public class AllProductsPage
     {
         private IWebDriver driver;
 
@@ -24,11 +25,11 @@ namespace WebDriverBasic.PO
             return new ProductEditingPage(driver);
         }
 
-        public bool IsTestProductPresent(string testProductName)
+        public bool IsTestProductPresent(Product product)
         {
             try
             {
-                driver.FindElement(By.XPath($"//td[.=\"{testProductName}\"]"));
+                driver.FindElement(By.XPath($"//td[.=\"{product.ProductName}\"]"));
             }
             catch (NoSuchElementException)
             {
@@ -37,9 +38,9 @@ namespace WebDriverBasic.PO
             return true;
         }
 
-        public ProductEditingPage ClickOnTestProductEditLink(string testProductName)
+        public ProductEditingPage ClickOnTestProductEditLink(Product product)
         {
-            testProductEditLink = driver.FindElement(By.XPath($"//td[.=\"{testProductName}\"]/following-sibling::td[.=\"Edit\"]/a"));
+            testProductEditLink = driver.FindElement(By.XPath($"//td[.=\"{product.ProductName}\"]/following-sibling::td[.=\"Edit\"]/a"));
             testProductEditLink.Click();
 
             return new ProductEditingPage(driver);

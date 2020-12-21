@@ -4,10 +4,11 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebDriverBasic.business_objects;
 
-namespace WebDriverBasic.PO
+namespace WebDriverBasic.po
 {
-    class ProductEditingPage
+    public class ProductEditingPage
     {
         private IWebDriver driver;
 
@@ -72,19 +73,18 @@ namespace WebDriverBasic.PO
             return discontinuedCheckbox.Selected;
         }
 
-        public AllProductsPage AddTestProduct(string productName, string category, string supplier, string unitPrice, 
-            string quantityPerUnit, string unitsInStock, string unitsOnOrder, string reorderLevel, bool discontinued)
+        public AllProductsPage AddTestProduct(Product product)
         {
-            new Actions(driver).SendKeys(productNameInput, productName).Build().Perform();
-            categorySelect.SelectByText(category);
-            supplierSelect.SelectByText(supplier);
-            new Actions(driver).SendKeys(unitPriceInput, unitPrice).Build().Perform();
-            quantityPerUnitInput.SendKeys(quantityPerUnit);
-            unitsInStockInput.SendKeys(unitsInStock);
-            unitsOnOrderInput.SendKeys(unitsOnOrder);
-            reorderLevelInput.SendKeys(reorderLevel);
+            new Actions(driver).SendKeys(productNameInput, product.ProductName).Build().Perform();
+            categorySelect.SelectByText(product.Category);
+            supplierSelect.SelectByText(product.Supplier);
+            new Actions(driver).SendKeys(unitPriceInput, product.UnitPrice).Build().Perform();
+            quantityPerUnitInput.SendKeys(product.QuantityPerUnit);
+            unitsInStockInput.SendKeys(product.UnitsInStock);
+            unitsOnOrderInput.SendKeys(product.UnitsOnOrder);
+            reorderLevelInput.SendKeys(product.ReorderLevel);
 
-            if (discontinued)
+            if (product.Discontinued)
             {
                 discontinuedCheckbox.Click();
             }

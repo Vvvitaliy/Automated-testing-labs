@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iSxvoXJkXB6fgSgljYX4VqCTYxD/OekLS8ki8ibN6H6SkaeVFk1s6JhBGdKhvilk+2epzVub69oRgFkpDPnojw==",
+  "dgSpecHash": "tq0jsshNT8RPvYsUi2zvptjeFBKG1apXERhR1zPzHOuAjvyFr2ioLrxGgXFoEQCkahv5/N28v459YFIKS1plEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Виталий\\Desktop\\repo\\ATrepo\\Automated-testing-labs\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
+  "projectFilePath": "C:\\Users\\Виталий\\Desktop\\Selenium WebDriver Frameworks\\WebDriverBasic\\WebDriverBasic\\WebDriverBasic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Виталий\\.nuget\\packages\\dotnetseleniumextras.pageobjects\\3.11.0\\dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
     "C:\\Users\\Виталий\\.nuget\\packages\\dotnetseleniumextras.pageobjects.core\\3.12.0\\dotnetseleniumextras.pageobjects.core.3.12.0.nupkg.sha512",
