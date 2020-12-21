@@ -73,6 +73,56 @@ namespace WebDriverBasic.po
             return discontinuedCheckbox.Selected;
         }
 
+        public void TypeInProductNameInput(string productName)
+        {
+            productNameInput.SendKeys(productName);
+        }
+
+        public void SelectInCategorySelect(string category)
+        {
+            categorySelect.SelectByText(category);
+        }
+
+        public void SelectInSupplierSelect(string supplier)
+        {
+            supplierSelect.SelectByText(supplier);
+        }
+
+        public void TypeInUnitPriceInput(string unitPrice)
+        {
+            unitPriceInput.SendKeys(unitPrice);
+        }
+
+        public void TypeInQuantityPerUnitInput(string quantityPerUnit)
+        {
+            quantityPerUnitInput.SendKeys(quantityPerUnit);
+        }
+
+        public void TypeInUnitsInStockInput(string unitsInStock)
+        {
+            unitsInStockInput.SendKeys(unitsInStock);
+        }
+
+        public void TypeInUnitsOnOrderInput(string unitsOnOrder)
+        {
+            unitsOnOrderInput.SendKeys(unitsOnOrder);
+        }
+
+        public void TypeInReorderLevelInput(string reorderLevel)
+        {
+            reorderLevelInput.SendKeys(reorderLevel);
+        }
+
+        public void ClickOnDiscontinuedCheckbox()
+        {
+            discontinuedCheckbox.Click();
+        }
+
+        public void ClickOnSubmitBtn()
+        {
+            new Actions(driver).Click(submitBtn).Build().Perform();
+        }
+
         public AllProductsPage AddTestProduct(Product product)
         {
             new Actions(driver).SendKeys(productNameInput, product.ProductName).Build().Perform();
