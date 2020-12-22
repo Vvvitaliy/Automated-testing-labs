@@ -38,6 +38,19 @@ namespace WebDriverBasic.po
             return true;
         }
 
+        public bool IsTestProductPresent(string productName)
+        {
+            try
+            {
+                driver.FindElement(By.XPath($"//td[.=\"{productName}\"]"));
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public ProductEditingPage ClickOnTestProductEditLink(Product product)
         {
             testProductEditLink = driver.FindElement(By.XPath($"//td[.=\"{product.ProductName}\"]/following-sibling::td[.=\"Edit\"]/a"));
